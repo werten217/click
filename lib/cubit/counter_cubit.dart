@@ -6,14 +6,12 @@ class CounterCubit extends Cubit<int> {
 
   Timer? _timer;
 
-
   void startIncrement() {
     _stopTimer();
     _timer = Timer.periodic(const Duration(milliseconds: 100), (_) {
       emit(state + 1);
     });
   }
-
 
   void startDecrement() {
     _stopTimer();
